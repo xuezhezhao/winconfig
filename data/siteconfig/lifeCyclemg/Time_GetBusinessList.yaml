@@ -1,0 +1,8 @@
+title: 查看生命周期业务名称
+url: /api/zh-cn/site/Time_GetBusinessList
+method: post
+info:
+case_data:
+-   case_name: case1_查看生命周期业务名称
+    body: {}
+    expect: {'description': 'success'}

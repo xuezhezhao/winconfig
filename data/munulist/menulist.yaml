@@ -1,0 +1,10 @@
+title: 获用户菜单列表接口
+url: /api/zh-cn/common/getUserMenuList
+method: post
+info:
+case_data:
+-   case_name: case1_查询用户菜单列表成功
+    body: {"source":"3"}
+    expect: {'description': ''}
+
+

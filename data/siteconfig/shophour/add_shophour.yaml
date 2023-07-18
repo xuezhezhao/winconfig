@@ -1,0 +1,64 @@
+title: 新增营业时间接口
+url: /api/zh-cn/ShopHour/addShopHour
+method: post
+info:
+case_data:
+-   case_name: case1_新增固定周期营业时间
+    body: {"siteKey":"G00001",
+        "period": 0,
+        "beginDate": "01-01",
+        "endDate": "12-31",
+        "name": "集团",
+        "beginTime": "10:00",
+        "endTime": '22:00',
+        "isCrossDays": 0,
+        "monday": 1,
+        "tuesday": 1,
+        "wednesday": 1,
+        "thursday": 1,
+        "friday": 1,
+        "saturday": 1,
+        "sunday": 1}
+    expect: {'description': '成功'}
+-   case_name: case2_新增除300外其他场所
+    body: { "siteKey": "${{get_nwe_sitkey()}}",
+            "siteType": '202',
+            "parentId": 1,
+            "customerId": "",
+            "openDate": "${{get_nowdate()}}",
+            "siteName": "${{get_new_site()}}",
+            "city": null,
+            "Country_Id": '100000',
+            "Region_Id": 0,
+            "Province_Id": 0,
+            "City_Id": 0,
+            "Area_Id": 0,
+            "siteStatus": '1',
+            "siteImage": "",
+            "area": 0,
+            "address": "",
+            "staffNo": 0,
+            "domainName": "|",
+            "indexNo": "" }
+    expect: { 'description': '成功' }
+-   case_name: case3_新增已存在的sitekey
+    body: { "siteKey": "A00001",
+            "siteType": '202',
+            "parentId": 1,
+            "customerId": "",
+            "openDate": "${{get_nowdate()}}",
+            "siteName": "${{get_new_site()}}",
+            "city": null,
+            "Country_Id": '100000',
+            "Region_Id": 0,
+            "Province_Id": 0,
+            "City_Id": 0,
+            "Area_Id": 0,
+            "siteStatus": '1',
+            "siteImage": "",
+            "area": 0,
+            "address": "",
+            "staffNo": 0,
+            "domainName": "|",
+            "indexNo": "" }
+    expect: { 'description': '失败' }

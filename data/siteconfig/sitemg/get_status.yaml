@@ -1,0 +1,10 @@
+title: 获取场所状态接口
+url: /api/zh-cn/site/getStatus
+method: post
+info:
+case_data:
+-   case_name: case1_查询场所状态成功
+    body: {"siteStatus":"-1"}
+    expect: {'description': '成功'}
+
+

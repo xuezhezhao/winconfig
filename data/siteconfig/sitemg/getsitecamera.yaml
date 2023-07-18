@@ -1,0 +1,14 @@
+title: 获取场所下关联摄像头
+url: /api/zh-cn/site/getSiteCamera
+method: post
+info:
+case_data:
+-   case_name: case1_查询场所下关联摄像头
+    body: {"siteKey":"P00001"}
+    expect: {'description': '成功'}
+-   case_name: case2_sitekey不存在
+    body: {"siteKey":"AY0001"}
+    expect: {'description': '成功'}
+-   case_name: case2_sitekey为空
+    body: {"siteKey":""}
+    expect: {'description': '请选择场所！'}

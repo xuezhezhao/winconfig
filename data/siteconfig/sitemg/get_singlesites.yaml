@@ -1,0 +1,14 @@
+title: 获取单个场所数据接口
+url: /api/zh-cn/site/getSingleSite
+method: post
+info:
+case_data:
+-   case_name: case1_查询单个场所下数据成功
+    body: {"siteKey":"G00001"}
+    expect: {'description': '成功'}
+-   case_name: case2_sitekey为不存在的
+    body: {"siteKey":"Z0124"}
+    expect: {'description': '成功'}
+-   case_name: case3_sitekey为空
+    body: {"siteKey":""}
+    expect: {'description': '请选择场所！'}

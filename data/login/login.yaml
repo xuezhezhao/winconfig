@@ -1,0 +1,17 @@
+title: 登录接口
+url: /api/zh-cn/Login/loginSystem
+method: post
+info: 场景为：前台获取验证码
+case_data:
+-   case_name: case1_登陆成功
+    body: {"UserName":"admin",
+           'PassWord': 'nYwYjdNM0tt4Zkhv5UHc7fuleKJEw4dgNJY3uF7PtLloG533/AHgphal/YCm2XTtM5YuxOKPK6cmuDBeWcCQsIAomaP27Awds70wtPJVUnrDzzrR9ARjLeQLWTdyek+e8X3XMZu4CIBUtcuJc7vZD03RhnPr+6m5BZCxl9arM20='}
+    expect: {'description': '登录成功！'}
+-   case_name: case2_账号错误
+    body: {"UserName":"admi",
+           'PassWord': 'nYwYjdNM0tt4Zkhv5UHc7fuleKJEw4dgNJY3uF7PtLloG533/AHgphal/YCm2XTtM5YuxOKPK6cmuDBeWcCQsIAomaP27Awds70wtPJVUnrDzzrR9ARjLeQLWTdyek+e8X3XMZu4CIBUtcuJc7vZD03RhnPr+6m5BZCxl9arM20='}
+    expect: {'description': '用户名或密码错误！'}
+-   case_name: case3_密码错误
+    body: {"UserName":"admin",
+           'PassWord': 'FVQRaideoJPVJU0A9XaNSP+wRbb2FMbafoOBuzhnypYN7yfcI3x1PVr0iHjlFQCfGXeozsKyLfBF/nJhkIY5usq3/+pr7Ma5qIVWwqyknQVcwVNJhNYRsACFH+JYKTUFGFLuWHI7FAA+8bVhG1QnbXGi+GyMJobdXq4IqmPgZyk='}
+    expect: {'description': '用户名或密码错误！'}

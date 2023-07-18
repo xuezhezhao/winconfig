@@ -1,0 +1,20 @@
+title: 获取场所下场所类型接口
+url: /api/zh-cn/site/getType
+method: post
+info:
+case_data:
+-   case_name: case1_获取100下场所类型
+    body: {"siteType":"100"}
+    expect: {'msg': [{"siteTypeCode":200,"siteTypeName":"地域"},{"siteTypeCode":201,"siteTypeName":"经销商"},{"siteTypeCode":202,"siteTypeName":"事业部"},{"siteTypeCode":203,"siteTypeName":"品牌"},{"siteTypeCode":204,"siteTypeName":"区域"},{"siteTypeCode":205,"siteTypeName":"省份"},{"siteTypeCode":206,"siteTypeName":"城市"},{"siteTypeCode":210,"siteTypeName":"经销商分类"},{"siteTypeCode":300,"siteTypeName":"店铺"}]}
+-   case_name: case2_获取200下场所类型
+    body: {"siteType":"200"}
+    expect: {'msg': [{"siteTypeCode":200,"siteTypeName":"地域"},{"siteTypeCode":201,"siteTypeName":"经销商"},{"siteTypeCode":202,"siteTypeName":"事业部"},{"siteTypeCode":203,"siteTypeName":"品牌"},{"siteTypeCode":204,"siteTypeName":"区域"},{"siteTypeCode":205,"siteTypeName":"省份"},{"siteTypeCode":206,"siteTypeName":"城市"},{"siteTypeCode":210,"siteTypeName":"经销商分类"},{"siteTypeCode":300,"siteTypeName":"店铺"}]}
+-   case_name: case3_获取300下场所类型
+    body: {"siteType":"300"}
+    expect: {'msg': [{"siteTypeCode":400,"siteTypeName":"区域"},{"siteTypeCode":401,"siteTypeName":"店内区域-收银区"},{"siteTypeCode":402,"siteTypeName":"店内区域-揽客区"},{"siteTypeCode":403,"siteTypeName":"店内区域-陪同区"},{"siteTypeCode":404,"siteTypeName":"店内区域-门区"},{"siteTypeCode":500,"siteTypeName":"楼层"},{"siteTypeCode":700,"siteTypeName":"通道"}]}
+-   case_name: case4_sitetype不存在
+    body: {"siteType":"900"}
+    expect: {'msg': []}
+-   case_name: case5_sitetype为空
+    body: {"siteType":""}
+    expect: {'msg': [{"siteTypeCode":100,"siteTypeName":"集团"},{"siteTypeCode":200,"siteTypeName":"地域"},{"siteTypeCode":201,"siteTypeName":"经销商"},{"siteTypeCode":202,"siteTypeName":"事业部"},{"siteTypeCode":203,"siteTypeName":"品牌"},{"siteTypeCode":204,"siteTypeName":"区域"},{"siteTypeCode":205,"siteTypeName":"省份"},{"siteTypeCode":206,"siteTypeName":"城市"},{"siteTypeCode":210,"siteTypeName":"经销商分类"},{"siteTypeCode":300,"siteTypeName":"店铺"},{"siteTypeCode":400,"siteTypeName":"区域"},{"siteTypeCode":401,"siteTypeName":"店内区域-收银区"},{"siteTypeCode":402,"siteTypeName":"店内区域-揽客区"},{"siteTypeCode":403,"siteTypeName":"店内区域-陪同区"},{"siteTypeCode":404,"siteTypeName":"店内区域-门区"},{"siteTypeCode":500,"siteTypeName":"楼层"},{"siteTypeCode":700,"siteTypeName":"通道"}]}

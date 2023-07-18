@@ -1,0 +1,68 @@
+title: 编辑场所接口
+url: /api/zh-cn/site/editSite
+method: post
+info:
+case_data:
+-   case_name: case1_编辑场所
+    body: {"siteKey":"A00001",
+        "siteType": '202',
+        "parentId": 1,
+        "customerId": null,
+        "openDate": "${{get_nowdate()}}",
+        "siteName": "${{get_new_site()}}",
+        "city": '0',
+        "Country_Id": '100000',
+        "Region_Id": 0,
+        "Province_Id": 0,
+        "City_Id": 0,
+        "Area_Id": 0,
+        "siteStatus": '1',
+        "siteImage": "",
+        "area": 0,
+        "address": "",
+        "staffNo": 0,
+        "domainName": "|",
+        "indexNo": null}
+    expect: {'description': '成功'}
+-   case_name: case2_编辑不存在的sitekey
+    body: { "siteKey": "${{get_nwe_sitkey()}}",
+            "siteType": '202',
+            "parentId": 1,
+            "customerId": "",
+            "openDate": "${{get_nowdate()}}",
+            "siteName": "${{get_new_site()}}",
+            "city": null,
+            "Country_Id": '100000',
+            "Region_Id": 0,
+            "Province_Id": 0,
+            "City_Id": 0,
+            "Area_Id": 0,
+            "siteStatus": '1',
+            "siteImage": "",
+            "area": 0,
+            "address": "",
+            "staffNo": 0,
+            "domainName": "|",
+            "indexNo": "" }
+    expect: { 'description': '成功' }
+-   case_name: case3_sitekey为空
+    body: { "siteKey": "",
+            "siteType": '202',
+            "parentId": 1,
+            "customerId": "",
+            "openDate": "${{get_nowdate()}}",
+            "siteName": "${{get_new_site()}}",
+            "city": null,
+            "Country_Id": '100000',
+            "Region_Id": 0,
+            "Province_Id": 0,
+            "City_Id": 0,
+            "Area_Id": 0,
+            "siteStatus": '1',
+            "siteImage": "",
+            "area": 0,
+            "address": "",
+            "staffNo": 0,
+            "domainName": "|",
+            "indexNo": "" }
+    expect: { 'description': '请选择场所！' }

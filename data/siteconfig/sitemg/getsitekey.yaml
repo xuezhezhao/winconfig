@@ -1,0 +1,17 @@
+title: 获取新场所sitekey接口
+url: /api/zh-cn/site/getNewSiteKey
+method: post
+info:
+case_data:
+-   case_name: case1_根场所下添加非300场所
+    body: {"siteKey":"G00001","siteType":"203"}
+    expect: {'description': '成功'}
+-   case_name: case2_根场所下添加300场所
+    body: {"siteKey":"G00001","siteType":"300"}
+    expect: {'description': '成功'}
+-   case_name: case3_sitekey为空
+    body: {"siteKey":"","siteType":"203"}
+    expect: {'description': '请选择场所！'}
+-   case_name: case4_sitekey不存在
+    body: {"siteKey":"Z00001","siteType":"203"}
+    expect: {'description': '服务器异常'}
